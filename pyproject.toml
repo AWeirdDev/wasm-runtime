@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "wasm-runtime"
-version = "0.1"
+version = "0.2"
 description = "WebAssembly-powered, sandboxed implementation of Python runtime for safely exec()-cuting dynamic Python code."
 keywords = ["wasm", "runtime", "python", "sandbox", "restricted", "limited"]
 authors = [
