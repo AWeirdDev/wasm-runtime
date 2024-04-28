@@ -91,7 +91,8 @@ class WasmRuntime:
 
     def exec(self, code: str) -> Result:
         byte_code = gzip.compress(code.encode("utf-8"))
+        brackets = "{}"
         f_code = (
-            f"""import gzip; exec(gzip.decompress({byte_code!r}).decode('utf-8'))"""
+            f"""import gzip; exec(gzip.decompress({byte_code!r}).decode('utf-8'), {brackets}, {brackets})"""
         )
         return self._run_argv(("python", "-c", f_code))
